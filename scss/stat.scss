@@ -1,0 +1,42 @@
+.stat {
+  background-color: $links-color;
+  padding: 40px 0 20px;
+
+  &-container {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__name {
+      font-size: 28px;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    &__info {
+      font-size: 28px;
+      color: $white;
+      line-height: 1;
+
+      p {
+        text-align: right;
+        margin: 0 0 10px 0;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

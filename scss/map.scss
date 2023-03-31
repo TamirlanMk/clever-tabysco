@@ -1,0 +1,73 @@
+.map-kostanay {
+  margin-bottom: 70px;
+}
+
+.map {
+
+  &__svg {
+    max-width: 100%;
+    width: 100%;
+
+    .fil2 {
+      fill: #FEFEFE;
+    }
+
+    .contur {
+      fill: #334B85;
+    }
+
+    .scale-lg {
+      transform-box: fill-box;
+      animation: scale 3s linear infinite alternate;
+      animation-direction: alternate;
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+
+    .fil0 {
+      fill: #334B85;
+    }
+
+    .fil1 {
+      fill: #708BCA;
+      transition: transform .2s linear;
+      transform-box: fill-box;
+      animation: scale-sm 1s linear infinite alternate;
+      animation-direction: alternate;
+      -webkit-will-change: transform;
+      -moz-will-change: transform;
+      -ms-will-change: transform;
+      -o-will-change: transform;
+      -khtml-will-change: transform;
+      will-change: transform;
+      transform-origin: 50% 50%;
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+
+    transform: scale(.7);
+  }
+  50% {
+
+    transform: scale(1);
+  }
+  100% {
+
+    transform: scale(.7);
+  }
+}
+
+@keyframes scale-sm {
+  0% {
+    transform: scale(.9);
+  }
+  25% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.9);
+  }
+}

@@ -1,0 +1,43 @@
+.composition {
+
+  padding-top: 40px;
+
+  &__image {
+    display: flex;
+  align-items: center;
+    justify-content: center;
+    img {
+      max-width: 96%;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item {
+      flex-basis: 30%;
+      max-width: 100%;
+      width: 100%;
+      text-align: left;
+      margin-right: -40px;
+
+      &__info {
+        font-size: 30px;
+        color: $primary-color;
+      }
+
+      &__title {
+        margin: 0;
+        color: $primary-color;
+        font-size: 40px;
+      }
+    }
+  }
+
+
+}

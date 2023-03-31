@@ -1,0 +1,67 @@
+.partners {
+  padding-top: 50px;
+
+  &__title {
+    font-size: 52px;
+    font-weight: 700;
+    color: $primary-color;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &::after {
+      flex-basis: 20%;
+
+      content: '';
+    }
+
+    &-item {
+      padding: 5px 10px;
+      flex-basis: 20%;
+
+      &__active {
+
+      }
+
+      img {
+        object-fit: contain;
+        max-width: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__accordion-item {
+    margin-bottom: 70px;
+  }
+
+  .accordion {
+    &__title {
+      font-size: 52px;
+      font-weight: normal;
+      color: $primary-color;
+      text-transform: uppercase;
+      margin: 0 0 20px;
+    }
+
+    &__header {
+      max-width: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    &__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s linear;
+    }
+  }
+}

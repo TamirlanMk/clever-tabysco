@@ -756,6 +756,10 @@ html, body {
   font-weight: 700;
 }
 
+.map-kostanay {
+  margin-bottom: 70px;
+}
+
 .map__svg {
   max-width: 100%;
   width: 100%;

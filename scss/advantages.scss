@@ -1,0 +1,42 @@
+.advantages {
+  padding-top: 20px;
+  margin-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    position: relative;
+    flex-basis: 29.5%;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 30px 40px;
+
+    &::after {
+      content: url("../assets/arrow.png");
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+
+    &__title,
+    &__description {
+      font-size: 26px;
+      color: $primary-color;
+    }
+
+    &__title {
+      font-weight: 700;
+    }
+
+    &__description {
+      font-weight: 500;
+    }
+  }
+}
