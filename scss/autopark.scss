@@ -1,14 +1,41 @@
 .autopark {
   padding-top: 40px;
 
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+
   &__title {
-    font-size: 60px;
+    font-size: 58px;
     text-transform: uppercase;
     max-width: 70%;
     width: 100%;
     color: $primary-color;
     font-weight: normal;
     margin: 0;
+
+    @media (max-width: 1024px) {
+      font-size: 58px;
+      max-width: 90%;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 368px) {
+      font-size: 28px;
+    }
 
     span {
       font-weight: 700;
@@ -20,20 +47,68 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 468px) {
+      flex-direction: column;
+    }
+  }
+
+  &-left {
+    padding-right: 40px;
+
+    @media (max-width: 468px) {
+      max-width: 100%;
+      width: 100%;
+      padding-right: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &-right {
+    @media (max-width: 468px) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &-right__content {
+    @media (max-width: 468px) {
+      display: flex;
+      justify-content: space-between;
+    }
 
     span {
       display: block;
       text-align: left;
-      font-size: 28px;
+      font-size: 24px;
       margin: 0;
       line-height: 1;
       color: $primary-color;
 
-      &:first-child {
-        margin-left: 30px;
+      @media (max-width: 560px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 468px) {
+        display: inline-block;
+      }
+    }
+
+    .d-b {
+      display: block;
+      margin-left: 0;
+    }
+
+    .ml-30 {
+      margin-left: 30px;
+
+      @media (max-width: 468px) {
+        margin-left: 0;
       }
     }
 
@@ -41,6 +116,17 @@
       font-size: 200px;
       font-weight: 700;
       line-height: .75;
+
+      @media (max-width: 560px) {
+        font-size: 160px;
+      }
+
+      @media (max-width: 468px) {
+        font-size: 120px;
+      }
+      @media (max-width: 345px) {
+        font-size: 80px;
+      }
     }
   }
 }

@@ -1,8 +1,8 @@
-.map-kostanay {
-  margin-bottom: 70px;
-}
-
 .map {
+
+  &-kostanay {
+    margin-bottom: 70px;
+  }
 
   &__svg {
     max-width: 100%;
@@ -22,6 +22,10 @@
       animation-direction: alternate;
       transform-origin: 50% 50%;
       will-change: transform;
+
+      @media (max-width: 768px) {
+        animation: none;
+      }
     }
 
     .fil0 {
@@ -41,6 +45,10 @@
       -khtml-will-change: transform;
       will-change: transform;
       transform-origin: 50% 50%;
+
+      @media (max-width: 768px) {
+        animation: none;
+      }
     }
   }
 }

@@ -10,58 +10,144 @@
   }
 
   &__list {
+
+  }
+
+  &__list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
-    &::after {
-      flex-basis: 20%;
-
-      content: '';
+    &--main {
+      padding-top: 20px;
+      margin-bottom: 80px;
+      justify-content: center;
     }
 
     &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       padding: 5px 10px;
-      flex-basis: 20%;
+      flex-basis: 16.666%;
+      height: 140px;
+      width: 100%;
 
-      &__active {
-
+      &:hover {
+        img {
+          transform: scale(1.12);
+        }
       }
 
       img {
         object-fit: contain;
         max-width: 100%;
         width: 100%;
+        max-height: 100%;
         display: block;
+        transition: all .2s linear;
       }
     }
   }
 
-  &__accordion-item {
-    margin-bottom: 70px;
+  &__tabs-item {
+    padding: 0 80px;
+    opacity: 0;
+    display: none;
+    min-height: 420px;
+
+    &--active {
+      display: block;
+      animation: fadeOut 0.4s linear;
+      animation-fill-mode: forwards;
+    }
   }
 
-  .accordion {
-    &__title {
-      font-size: 52px;
-      font-weight: normal;
-      color: $primary-color;
-      text-transform: uppercase;
-      margin: 0 0 20px;
-    }
+  &__tabs-list {
+    position: relative;
+    margin-bottom: 20px;
+  }
 
-    &__header {
-      max-width: 100%;
-      width: 100%;
+  &__tabs-control {
+    .prev, .next {
       cursor: pointer;
+      top: 100px;
+      z-index: 1000;
+      position: absolute;
+      height: 60px;
+      width: 60px;
+
+      img {
+        max-width: 100%;
+      }
     }
 
-    &__body {
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.4s linear;
+    .prev {
+      img {
+        transform: scale(-1);
+      }
+
+      left: 0;
     }
+
+    .next {
+      right: 0;
+    }
+  }
+
+  &__tabs-header {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  &__tabs-link {
+    position: relative;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 47px;
+    color: $primary-color;
+
+    &:not(:last-child) {
+      border-right: 3px solid #622d2d;
+      padding-right: 50px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $primary-color;
+      height: 3px;
+      width: 0;
+      bottom: -10px;
+      left: 50px;
+
+      transition: width .2s linear;
+    }
+
+    &--active {
+
+      &::after {
+        width: calc(100% - 100px);
+      }
+    }
+  }
+
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

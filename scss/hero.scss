@@ -1,14 +1,26 @@
 .hero {
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+
   position: relative;
   padding-top: 50px;
   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../assets/hero-bg.png") no-repeat center;
   background-size: cover;
 
   &__image {
+    display: flex;
+    flex-shrink: 0;
+
     img {
+      flex-shrink: 0;
       margin-top: -20px;
       max-width: 85%;
       width: 100%;
+    }
+
+    @media (max-width: 940px) {
+      display: none;
     }
   }
 
@@ -20,10 +32,38 @@
   }
 
   &__logo {
-    font-size: 100px;
+    font-size: 92px;
     letter-spacing: 50px;
-    color: $white;
+    color: #FEFEFE;
     margin-bottom: 40px;
+
+    transition: font-size .2s linear;
+
+    img {
+      max-width: 60%;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 82px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 68px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 48px;
+      letter-spacing: 30px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 368px) {
+      font-size: 32px;
+      letter-spacing: 20px;
+    }
 
     span {
       font-weight: 700;
@@ -31,12 +71,27 @@
   }
 
   &__title {
-    color: #ffffff;
-    font-size: 36px;
+    color: #FEFEFE;
+    font-size: 32px;
     text-transform: uppercase;
     line-height: 50px;
     margin: 0 0 50px;
     letter-spacing: 2px;
+
+    transition: font-size .2s linear;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 20px;
+    }
 
     span {
       display: block;
@@ -47,11 +102,35 @@
     color: $primary-color;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 48px;
+
+    @media (max-width: 650px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 24px;
+    }
 
     span {
       font-weight: 400;
       font-size: 36px;
+
+      @media (max-width: 650px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 560px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 375px) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -60,8 +139,27 @@
   padding-top: 80px;
   background: url("../assets/page-2-hero-bg.png") no-repeat center;
   background-size: cover;
-  min-height: 1000px;
+  min-height: 900px;
+  max-height: 900px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: 400px;
+
+    max-height: 800px;
+  }
+
+  @media (max-width: 650px) {
+    max-height: 00px;
+  }
+
+  @media (max-width: 560px) {
+    max-height: 800px;
+  }
+
+  @media (max-width: 368px) {
+    max-height: 800px;
+  }
 
   .hero-container {
     display: flex;
@@ -71,43 +169,73 @@
   }
 
   .hero__title {
-    font-size: 100px;
+    font-size: 92px;
     line-height: 1;
-  }
 
-  .hero__subtitle {
-    color: #ffffff;
-    font-size: 26px;
-    line-height: 50px;
-    margin: 0 0 50px;
-    letter-spacing: 2px;
+    @media (max-width: 1024px) {
+      font-size: 82px;
+    }
 
-    span {
-      display: block;
+    @media (max-width: 768px) {
+      font-size: 68px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 368px) {
+      font-size: 32px;
     }
   }
 
   .hero__subtitle {
     color: #ffffff;
-    font-size: 26px;
-    line-height: 1;
+    font-size: 24px;
+    line-height: 1.2;
     margin: 0;
     letter-spacing: 2px;
     text-transform: none;
 
     span {
       display: block;
-      font-weight: 400;
+      font-weight: 700;
       font-size: 28px;
+
+      @media (max-width: 650px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 560px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 375px) {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
     }
   }
 
   .hero__content {
+    z-index: 10;
     max-width: 50%;
     width: 100%;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+
   }
 
   .hero__image {
+    z-index: 20;
     transform: scale(1.4);
   }
 }
@@ -119,10 +247,31 @@
   background-size: cover;
   overflow: hidden;
 
+  @media (max-width: 368px) {
+    padding-top: 50px;
+  }
+
   .hero__content {
+    z-index: 10;
     max-width: 50%;
     width: 100%;
     margin-bottom: 400px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 300px;
+    }
+
+    @media (max-width: 650px) {
+      margin-bottom: 300px;
+    }
+
+    @media (max-width: 560px) {
+      margin-bottom: 250px;
+    }
+
+    @media (max-width: 368px) {
+      margin-bottom: 200px;
+    }
   }
 
   .hero-container {
@@ -133,14 +282,55 @@
   }
 
   .hero__title {
-    font-size: 100px;
+    font-size: 92px;
     line-height: 1;
+
+    @media (max-width: 1024px) {
+      font-size: 82px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 68px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 368px) {
+      margin-bottom: 100px;
+      font-size: 32px;
+    }
   }
 
   .hero__image {
     position: absolute;
     right: 0;
     transform: translate(15%);
+
+    @media (max-width: 1024px) {
+      display: block;
+      transform: translate(26%) scale(0.7);
+      bottom: -100px;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+      transform: translate(30%) scale(0.6);
+      bottom: -130px;
+    }
+
+    @media (max-width: 560px) {
+      bottom: -80px;
+    }
+
+    @media (max-width: 368px) {
+      bottom: -60px;
+    }
   }
 }
 
@@ -150,11 +340,26 @@
   padding-top: 80px;
   height: auto;
 
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+
+  .hero__image {
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
   .hero__content {
     color: $primary-color;
+    z-index: 214;
     max-width: 60%;
     width: 100%;
     margin-bottom: 40px;
+
+    @media (max-width: 560px) {
+      max-width: 100%;
+    }
   }
 
   .hero-container {
@@ -162,14 +367,40 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: 560px) {
+      flex-direction: column-reverse;
+    }
   }
 
   .hero__title {
-    font-size: 50px;
+    font-size: 48px;
     color: inherit;
     line-height: 1;
     font-weight: normal;
     margin: 0 0 40px;
+
+    @media (max-width: 1024px) {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 368px) {
+      font-size: 20px;
+    }
   }
 
   .hero__text {
@@ -179,13 +410,46 @@
     font-weight: normal;
     margin: 0 0 40px;
 
+    @media (max-width: 1024px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 368px) {
+      font-size: 18px;
+    }
+
     span {
       display: block;
     }
 
     .tt-text {
       text-transform: uppercase;
-      font-size: 40px;
+      font-size: 42px;
+
+      @media (max-width: 1024px) {
+        font-size: 26px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 560px) {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
     }
 
     .bg-text {
@@ -198,5 +462,10 @@
     max-width: 40%;
     width: 100%;
     margin-top: 30px;
+
+    @media (max-width: 560px) {
+      max-width: 50%;
+      margin: 0 auto;
+    }
   }
 }

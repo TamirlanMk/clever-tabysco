@@ -7,28 +7,69 @@
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
+
+    @media (max-width: 848px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
   }
 
   &__list-item {
     position: relative;
     flex-basis: 29.5%;
-    max-width: 100%;
     width: 100%;
     padding: 0 30px 40px;
 
+    @media (max-width: 848px) {
+      max-width: 80%;
+    }
+
+    @media (max-width: 560px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+      padding: 0 20px 40px;
+    }
+
     &::after {
-      content: url("../assets/arrow.png");
+      content: '';
+      background: url("../assets/arrow.png") no-repeat center;
+      background-size: cover  ;
+      width: 65px;
+      height: 65px;
       position: absolute;
       bottom: -20px;
       left: 50%;
+
+      @media (max-width: 650px) {
+        max-width: 40px;
+        height: 40px;
+        bottom: 0;
+      }
+
+      @media (max-width: 368px) {
+        font-size: 18px;
+      }
 
       transform: translateX(-50%);
     }
 
     &__title,
     &__description {
-      font-size: 26px;
+      font-size: 24px;
       color: $primary-color;
+      max-width: 100%;
+      width: 100%;
+
+      @media (max-width: 650px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 368px) {
+        font-size: 18px;
+      }
     }
 
     &__title {

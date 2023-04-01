@@ -12,47 +12,53 @@
 </head>
 <body>
 <div class="site-container">
-    <header class="header header--with-border">
+    <header class="header">
         <div class="container header-container">
             <div class="logo header__logo">
                 <img src="assets/logo-blue.png" alt="TabysCO">
             </div>
             <div class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-list__item">
-                        <a class="header__menu-list__link" href="index.html">
-                            О компании
-                        </a>
-                    </li>
-                    <li class="header__menu-list__item">
-                        <a class="header__menu-list__link" href="page-2.html">
-                            Складская логистика
-                        </a>
-                    </li>
-                    <li class="header__menu-list__item">
-                        <a class="header__menu-list__link" href="page-3.html">
-                            Транспортная логистика
-                        </a>
-                    </li>
-                    <li class="header__menu-list__item">
-                        <a class="header__menu-list__link" href="#">
-                            Дистрибуция
-                        </a>
-                    </li>
-                    <li class="header__menu-list__item">
-                        <a class="header__menu-list__link" href="page-5.html">
-                            Наши партнеры
-                        </a>
-                    </li>
-                    <li class="header__menu-list__item">
-                        <a class="header__menu-list__link" href="#">
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
+                <div class="header__menu-burger">
+                    <span></span>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-list__item">
+                            <a class="header__menu-list__link" href="index.html">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="header__menu-list__item">
+                            <a class="header__menu-list__link" href="page-2.html">
+                                Складская логистика
+                            </a>
+                        </li>
+                        <li class="header__menu-list__item">
+                            <a class="header__menu-list__link" href="page-3.html">
+                                Транспортная логистика
+                            </a>
+                        </li>
+                        <li class="header__menu-list__item">
+                            <a class="header__menu-list__link" href="page-4.html">
+                                Дистрибуция
+                            </a>
+                        </li>
+                        <li class="header__menu-list__item">
+                            <a class="header__menu-list__link" href="page-5.html">
+                                Наши партнеры
+                            </a>
+                        </li>
+                        <li class="header__menu-list__item">
+                            <a class="header__menu-list__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
+
     <main class="main">
         <section class="hero hero--fourth-page">
             <div class="container hero-container">
@@ -88,7 +94,7 @@
                 </div>
             </div>
         </section>
-        <section class="map-kostanay">
+        <section class="map map-kostanay">
             <div class="container map-container">
                 <svg class="map__svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
                      version="1.1"
@@ -986,5 +992,6 @@
         </div>
     </footer>
 </div>
+<script src="js/app.js"></script>
 </body>
 </html>
