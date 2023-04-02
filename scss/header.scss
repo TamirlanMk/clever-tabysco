@@ -3,6 +3,10 @@
   padding-top: 50px;
   padding-bottom: 15px;
 
+  a {
+    display: inline-block;
+  }
+
   &--with-border {
     border-bottom: 3px solid #009846;
   }
