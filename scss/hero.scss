@@ -8,6 +8,13 @@
   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../assets/hero-bg.png") no-repeat center;
   background-size: cover;
 
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__image {
     display: flex;
     flex-shrink: 0;
@@ -22,13 +29,6 @@
     @media (max-width: 940px) {
       display: none;
     }
-  }
-
-  &-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &__logo {
