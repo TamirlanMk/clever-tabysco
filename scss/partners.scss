@@ -1,6 +1,5 @@
 .partners {
   padding-top: 50px;
-  padding-bottom: 50px;
 
   &__title {
     font-size: 52px;
@@ -252,4 +251,11 @@
   100% {
     opacity: 1;
   }
+}
+
+.tabs {
+  border: 5px solid #B2B4B3;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  padding: 50px 0;
 }

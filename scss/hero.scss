@@ -74,23 +74,24 @@
     color: #FEFEFE;
     font-size: 32px;
     text-transform: uppercase;
-    line-height: 50px;
+    line-height: 36px;
     margin: 0 0 50px;
     letter-spacing: 2px;
-
     transition: font-size .2s linear;
 
     @media (max-width: 768px) {
       font-size: 28px;
-      line-height: 36px;
+      line-height: 32px;
     }
 
     @media (max-width: 650px) {
       font-size: 24px;
+      line-height: 26px;
     }
 
     @media (max-width: 560px) {
       font-size: 20px;
+      line-height: 24px;
     }
 
     span {
