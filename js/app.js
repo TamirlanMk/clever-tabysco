@@ -1,13 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    let HEADER_BURGER = document.querySelector('.header__menu-burger');
-    let HEADER_NAV = document.querySelector('.header__nav');
+    let headerBurger = document.querySelector('.header__menu-burger');
+    let headerNav = document.querySelector('.header__nav');
+    let menuLinks = document.querySelectorAll('.header__menu-list__link');
 
-    HEADER_BURGER.onclick = () => {
-
-        HEADER_BURGER.classList.toggle('header__menu-burger--active')
-        HEADER_NAV.classList.toggle('header__nav--active')
-
+    headerBurger.onclick = () => {
+        headerBurger.classList.toggle('header__menu-burger--active')
+        headerNav.classList.toggle('header__nav--active')
     }
+
+    menuLinks.forEach((link) => {
+
+        link.onclick = (e) => {
+            headerBurger.classList.remove('header__menu-burger--active');
+            headerNav.classList.remove('header__nav--active');
+
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault()
+
+                let sectionID = link.getAttribute('href');
+                let section = document.querySelector(sectionID);
+
+                window.scrollTo({
+                    behavior: 'smooth',
+                    top: section.offsetTop
+                })
+            }
+        }
+    })
 
 });

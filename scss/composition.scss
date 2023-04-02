@@ -70,10 +70,13 @@
       max-width: 100%;
       width: 100%;
       text-align: left;
-      margin-right: -40px;
 
-      @media (max-width: 1024px) {
-        margin-right: 0;
+      &:not(:last-child) {
+        margin-right: -40px;
+
+        @media (max-width: 1024px) {
+          margin-right: 0;
+        }
       }
 
       @media (max-width: 700px) {

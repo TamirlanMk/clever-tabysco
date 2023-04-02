@@ -1,5 +1,6 @@
 .partners {
   padding-top: 50px;
+  padding-bottom: 50px;
 
   &__title {
     font-size: 52px;
@@ -7,10 +8,25 @@
     color: $primary-color;
     text-transform: uppercase;
     margin: 0 0 40px;
-  }
 
-  &__list {
+    @media (max-width: 1024px) {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
 
+    @media (max-width: 768px) {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 368px) {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
   }
 
   &__list {
@@ -36,6 +52,26 @@
       height: 140px;
       width: 100%;
 
+      @media (max-width: 1024px) {
+        flex-basis: 20%;
+      }
+
+      @media (max-width: 768px) {
+        flex-basis: 25%;
+      }
+
+      @media (max-width: 560px) {
+        flex-basis: 33.333%
+      }
+
+      @media (max-width: 560px) {
+        flex-basis: 33.333%
+      }
+
+      @media (max-width: 500px) {
+        flex-basis: 50%
+      }
+
       &:hover {
         img {
           transform: scale(1.12);
@@ -54,10 +90,17 @@
   }
 
   &__tabs-item {
-    padding: 0 80px;
     opacity: 0;
     display: none;
     min-height: 420px;
+
+    @media (max-width: 1500px) {
+      padding: 0 80px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 30px;
+    }
 
     &--active {
       display: block;
@@ -74,11 +117,16 @@
   &__tabs-control {
     .prev, .next {
       cursor: pointer;
-      top: 100px;
+      top: 200px;
       z-index: 1000;
       position: absolute;
       height: 60px;
       width: 60px;
+
+      @media (max-width: 480px) {
+        height: 40px;
+        width: 40px;
+      }
 
       img {
         max-width: 100%;
@@ -90,11 +138,19 @@
         transform: scale(-1);
       }
 
-      left: 0;
+      left: -80px;
+
+      @media (max-width: 1500px) {
+        left: 0;
+      }
     }
 
     .next {
-      right: 0;
+      right: -80px;
+
+      @media (max-width: 1500px) {
+        right: 0;
+      }
     }
   }
 
@@ -103,40 +159,86 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 60px;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   &__tabs-link {
+    text-align: center;
     position: relative;
     cursor: pointer;
     font-size: 28px;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 0 47px;
     color: $primary-color;
 
-    &:not(:last-child) {
-      border-right: 3px solid #622d2d;
-      padding-right: 50px;
+    max-width: 33%;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
     }
 
-    &::after {
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 30px;
+        width: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        transition: width .2s linear;
+      }
+
+      @media (max-width: 480px) {
+        &::before {
+          height: 0;
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+    }
+
+    span::after {
       content: '';
       position: absolute;
       background-color: $primary-color;
       height: 3px;
       width: 0;
       bottom: -10px;
-      left: 50px;
+      left: 50%;
+      transform: translateX(-50%);
 
       transition: width .2s linear;
     }
 
     &--active {
 
-      &::after {
-        width: calc(100% - 100px);
+      span::after {
+        width: 100%;
       }
     }
   }
