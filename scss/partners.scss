@@ -1,3 +1,25 @@
+@mixin list_items_media {
+  @media (max-width: 1024px) {
+    flex-basis: 20%;
+  }
+
+  @media (max-width: 768px) {
+    flex-basis: 25%;
+  }
+
+  @media (max-width: 560px) {
+    flex-basis: 33.333%
+  }
+
+  @media (max-width: 560px) {
+    flex-basis: 33.333%
+  }
+
+  @media (max-width: 500px) {
+    flex-basis: 50%
+  }
+}
+
 .partners {
   padding-top: 50px;
 
@@ -39,6 +61,12 @@
       padding-top: 20px;
       margin-bottom: 80px;
       justify-content: center;
+
+      .partners__list-item {
+        flex-basis: 16.666%;
+
+        @include list_items_media;
+      }
     }
 
     &-item {
@@ -47,29 +75,15 @@
       align-items: center;
       justify-content: center;
       padding: 5px 10px;
-      flex-basis: 16.666%;
+      flex-basis: 14.285%;
       height: 140px;
       width: 100%;
 
-      @media (max-width: 1024px) {
-        flex-basis: 20%;
+      @media (max-width: 1300px) {
+        flex-basis: 16.666%;
       }
 
-      @media (max-width: 768px) {
-        flex-basis: 25%;
-      }
-
-      @media (max-width: 560px) {
-        flex-basis: 33.333%
-      }
-
-      @media (max-width: 560px) {
-        flex-basis: 33.333%
-      }
-
-      @media (max-width: 500px) {
-        flex-basis: 50%
-      }
+      @include list_items_media;
 
       &:hover {
         img {
@@ -254,8 +268,11 @@
 }
 
 .tabs {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+
   border: 5px solid #B2B4B3;
   border-radius: 25px;
-  margin-bottom: 50px;
   padding: 50px 0;
 }

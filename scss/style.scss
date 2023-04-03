@@ -38,6 +38,13 @@ img {
   overflow: hidden;
 }
 
+.overflow-hidden--menu {
+  @media (max-width: 540px) {
+    overflow: hidden;
+  };
+}
+
+
 html, body {
   height: 100%;
 }

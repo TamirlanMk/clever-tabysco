@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headerBurger.onclick = () => {
         headerBurger.classList.toggle('header__menu-burger--active')
         headerNav.classList.toggle('header__nav--active')
+        document.body.classList.toggle('overflow-hidden--menu')
     }
 
     menuLinks.forEach((link) => {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.onclick = (e) => {
             headerBurger.classList.remove('header__menu-burger--active');
             headerNav.classList.remove('header__nav--active');
+            document.body.classList.remove('overflow-hidden--menu')
 
             if (link.getAttribute('href').startsWith('#')) {
                 e.preventDefault()
