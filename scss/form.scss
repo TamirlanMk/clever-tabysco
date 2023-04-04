@@ -1,0 +1,76 @@
+.form {
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &__input {
+    border: none;
+    border-bottom: 2px solid $secondary-color;
+    border-left: 2px solid $secondary-color;
+
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    padding: 4px 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: transparent;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+
+    transition: border-bottom-color .2s linear,
+    border-left-color .2s linear,
+    border-right-color .2s linear,
+    border-top-color .2s linear;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+      transition: 0.2s linear;
+    }
+
+    &:invalid {
+      border-top: 2px solid $danger;
+      border-right: 2px solid $danger;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $secondary-color-light;
+      border-left: 2px solid $secondary-color-light;
+
+      border-top: 2px solid $secondary-color-light;
+      border-right: 2px solid $secondary-color-light;
+    }
+  }
+
+  &__submit {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 18px;
+    transition: all .2s linear;
+
+    border: none;
+    border-bottom: 2px solid $white;
+    border-left: 2px solid $white;
+
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    &:focus {
+      outline: none;
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+    }
+  }
+
+  &__group {
+    margin-bottom: 10px;
+  }
+}

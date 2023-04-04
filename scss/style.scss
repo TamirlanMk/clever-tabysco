@@ -44,7 +44,6 @@ img {
   };
 }
 
-
 html, body {
   height: 100%;
 }
@@ -66,6 +65,7 @@ html, body {
 //Template
 @import "header";
 @import "footer";
+@import "form";
 
 // Sections
 @import "hero";
