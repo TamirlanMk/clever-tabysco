@@ -50,6 +50,25 @@
     }
   }
 
+  &__logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 10px;
+    flex-basis: 14.285%;
+    height: 140px;
+    width: 100%;
+
+    img {
+      object-fit: contain;
+      max-width: 100%;
+      width: 100%;
+      max-height: 100%;
+      display: block;
+      transition: all .2s linear;
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -102,23 +121,25 @@
     }
   }
 
+  &__slider {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__tabs-item {
     opacity: 0;
-    display: none;
-    min-height: 420px;
-
-    @media (max-width: 1500px) {
-      padding: 0 80px;
-    }
-
-    @media (max-width: 480px) {
-      padding: 0 30px;
-    }
+    visibility: hidden;
+    height: 0;
+    position: relative;
 
     &--active {
-      display: block;
-      animation: fadeOut 0.4s linear;
-      animation-fill-mode: forwards;
+      visibility: visible;
+      height: auto;
+      min-height: 420px;
+      animation: fadeOut .2s linear;
+      animation-fill-mode: both;
     }
   }
 
@@ -255,8 +276,8 @@
       }
     }
   }
-
 }
+
 
 @keyframes fadeOut {
   0% {
@@ -268,11 +289,6 @@
 }
 
 .tabs {
-  margin-right: 10px;
-  margin-left: 10px;
   margin-bottom: 50px;
-
-  border: 5px solid #B2B4B3;
-  border-radius: 25px;
   padding: 50px 0;
 }

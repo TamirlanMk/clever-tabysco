@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .from('.fade-out', {
                     xPercent: 100,
                     opacity: 0,
+                    duration: 2
                 });
         }
 

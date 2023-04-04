@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--  Stylesheets  -->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="libs/slick/slick.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>TabysCO</title>
 </head>
@@ -62,7 +63,6 @@
         <section class="partners">
             <div class="container partners-container">
                 <h1 class="partners__title">Наши партнеры</h1>
-<!--                <div class="partners__list partners__list&#45;&#45;main"></div>-->
             </div>
         </section>
         <section class="tabs">
@@ -82,162 +82,290 @@
                     <div class="partners__tabs-list">
 
                         <div id="tab-alcohol" class="partners__tabs-item partners__tabs-item--active">
-                            <div class="partners__list">
+                            <div class="slider__alcohol">
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/cricova.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/alcohol-products/cricova.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/marani.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/alcohol-products/marani.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/sierra.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/alcohol-products/sierra.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/santo-stefano.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/alcohol-products/santo-stefano.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/turgen.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/turgen.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/paulaner.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/paulaner.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/bericoni.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/bericoni.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/captain-morgan.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/captain-morgan.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/johnie-walker.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/johnie-walker.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/smirnoff.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/smirnoff.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/jim-beam.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/jim-beam.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/bulbash.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/bulbash.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/beluga.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/beluga.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/vozdux.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/vozdux.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/ledoff.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/ledoff.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/tamada.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/tamada.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/chateau-mukhranl.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/chateau-mukhranl.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/fortinia.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/fortinia.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/ambassador.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/alcohol-products/ambassador.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/old-tbilisi.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/old-tbilisi.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/alcohol-products/tundra.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/alcohol-products/tundra.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/syabry.png" alt="Сябры">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/syabry.png" alt="Сябры">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/archangelskaya.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/archangelskaya.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/abf.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/abf.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/unitraid.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/unitraid.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/raimbek.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/raimbek.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/van777.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/van777.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/force-trade.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/force-trade.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/bolcro.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/bolcro.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/ararat%20wine.png" alt="">
+                                    <div class="partners__logo-wrapper">
+
+                                        <img src="assets/partners/ararat%20wine.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/partners-10.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/partners-10.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__tabs-control">
+                                <div class="prev">
+                                    <img src="assets/arrow.png" alt="Предыдущее">
+                                </div>
+                                <div class="next">
+                                    <img src="assets/arrow.png" alt="Следующее">
                                 </div>
                             </div>
                         </div>
 
                         <div id="tab-products" class="partners__tabs-item">
-                            <div class="partners__list">
-
+                            <div class="slider__products">
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/vici.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/vici.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/altaiskai-skazka.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/altaiskai-skazka.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/santa-bremor.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/santa-bremor.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/palma.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/palma.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/vibor-schefa.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/vibor-schefa.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/sova.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/sova.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/ainalain.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/ainalain.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/karat.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/karat.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/corona.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/corona.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/nataxtari.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/nataxtari.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/juicy.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/juicy.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/chernogolovka.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/chernogolovka.png" alt="">
+                                    </div>
                                 </div>
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/products/dobroflot.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/products/dobroflot.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners__tabs-control">
+                                <div class="prev">
+                                    <img src="assets/arrow.png" alt="Предыдущее">
+                                </div>
+                                <div class="next">
+                                    <img src="assets/arrow.png" alt="Следующее">
                                 </div>
                             </div>
                         </div>
 
                         <div id="tab-electrical" class="partners__tabs-item">
-                            <div class="partners__list">
+                            <div class="slider__electrical">
                                 <div class="partners__list-item">
-                                    <img src="assets/partners/electro-products/era.png" alt="">
+                                    <div class="partners__logo-wrapper">
+                                        <img src="assets/partners/electro-products/era.png" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="partners__tabs-control">
-                            <div class="prev">
-                                <img src="assets/arrow.png" alt="Предыдущее">
-                            </div>
-                            <div class="next">
-                                <img src="assets/arrow.png" alt="Следующее">
+                            <div class="partners__tabs-control">
+                                <div class="prev">
+                                    <img src="assets/arrow.png" alt="Предыдущее">
+                                </div>
+                                <div class="next">
+                                    <img src="assets/arrow.png" alt="Следующее">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -277,11 +405,11 @@
                     </div>
                 </div>
                 <div class="footer__form">
-                    <form   method="get" class="form form--footer">
+                    <form method="get" class="form form--footer">
                         <div class="form__group">
                             <label>
                                 <span>Имя:</span>
-                                <input type="text"  placeholder="Имя" class="form__input">
+                                <input type="text" placeholder="Имя" class="form__input">
                             </label>
                         </div>
                         <div class="form__group">
@@ -294,11 +422,16 @@
                             <button class="form__submit" type="submit">Отправить</button>
                         </div>
                     </form>
-                </div>            </div>
+                </div>
+            </div>
         </div>
     </footer>
 </div>
-<script src="js/tabs.js"></script>
-<script src="js/app.js"></script>
+<script defer src="libs/jquery/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+<!-- Slick 1.8.0 -->
+<script defer src="libs/slick/slick.js"></script>
+<script defer src="js/slider.js"></script>
+<script defer src="js/tabs.js"></script>
+<script defer src="js/app.js"></script>
 </body>
 </html>
