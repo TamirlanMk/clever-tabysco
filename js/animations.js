@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         }
 
+        if (document.querySelectorAll(".fade-out-1").length) {
+            gsap
+                .timeline()
+                .from('.fade-out-1', {
+                    xPercent: 100,
+                    opacity: 0,
+                    duration: 1.3
+                });
+        }
+
         if (document.querySelector(".hero--second-page")) {
             gsap
                 .timeline()

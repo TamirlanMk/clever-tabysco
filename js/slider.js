@@ -1,4 +1,3 @@
-(function ($) {
 
     var responsiveConfig = [
         {
@@ -32,7 +31,7 @@
         {
             breakpoint: 368,
             settings: {
-                slidesPerRow: 2,
+                slidesPerRow: 1,
                 rows: 3,
             }
         }
@@ -45,7 +44,8 @@
         arrows: true,
         prevArrow: $('#tab-alcohol .prev'),
         nextArrow: $('#tab-alcohol .next'),
-        responsive: responsiveConfig
+        responsive: responsiveConfig,
+        lazyLoad: 'ondemand',
     });
 
     $('.slider__products').slick({
@@ -68,5 +68,4 @@
         responsive: responsiveConfig
     });
 
-
-}(jQuery));
+    $('.slider__preloader').addClass( 'slider__preloader--loaded' );
