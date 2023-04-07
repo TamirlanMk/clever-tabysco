@@ -124,9 +124,10 @@
 
   &__slider {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
+    max-height: 430px;
   }
 
   &__tabs-item {
@@ -134,11 +135,13 @@
     visibility: hidden;
     height: 0;
     position: relative;
+    overflow: hidden;
 
     &--active {
       visibility: visible;
       height: auto;
       min-height: 420px;
+      max-height: 430px;
       animation: fadeOut .2s linear;
       animation-fill-mode: both;
     }
