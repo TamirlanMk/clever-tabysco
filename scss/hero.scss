@@ -139,6 +139,8 @@
 
 .hero.hero--second-page {
   padding-top: 80px;
+
+
   background: url("../assets/page-2-hero-bg.png") no-repeat center;
   background-size: cover;
   min-height: 900px;
@@ -147,8 +149,8 @@
 
   @media (max-width: 768px) {
     min-height: 400px;
-
     max-height: 800px;
+    padding-top: 50px;
   }
 
   @media (max-width: 650px) {

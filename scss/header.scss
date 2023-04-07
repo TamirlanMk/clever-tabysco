@@ -43,7 +43,7 @@
 
       display: none;
       position: absolute;
-      top: 73px;
+      top: 78px;
       right: 20px;
       z-index: 10001;
       transform: translateY(-50%);
@@ -58,6 +58,10 @@
 
       @media (max-width: 1300px) {
         display: block;
+      }
+
+      @media (max-width: 320px) {
+        top: 67px;
       }
 
       span {
@@ -124,7 +128,7 @@
       bottom: 0;
       z-index: 10000;
       background-color: #FEFEFE;
-      width: 30%;
+      width: 40%;
       -webkit-box-shadow: -4px 2px 19px -5px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: -4px 2px 19px -5px rgba(34, 60, 80, 0.2);
       box-shadow: -4px 2px 19px -5px rgba(34, 60, 80, 0.2);
@@ -171,13 +175,13 @@
   &__menu-list__item {
     color: $links-color;
 
-    @media (max-width: 1300px) {
-      margin-bottom: 20px;
-      text-align: right;
-    }
-
     &:not(:last-child) {
       margin-right: 15px;
+
+      @media (max-width: 1300px) {
+        margin-bottom: 20px;
+        text-align: right;
+      }
 
       @media (max-width: 1300px) {
         margin-right: 0;
@@ -186,7 +190,60 @@
   }
 
   &__menu-list__link {
+    position: relative;
     font-size: 14px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      max-width: 100%;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #334b85;
+      transition: width .2s linear;
+    }
+
+    &--active {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 18px;
+      border-bottom: 2px solid $primary-color;
+      border-right: 2px solid $primary-color;
+      padding: 4px 10px;
+      transition: background-color .2s linear;
+
+      &--active {
+        color: #ffffff;
+        background-color: $secondary-color;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        color: #ffffff;
+        background-color: $secondary-color;
+      }
+    }
+
+    @media (max-width: 340px) {
+      font-size: 14px;
+    }
+
     color: inherit;
     text-decoration: none;
     text-transform: uppercase;
