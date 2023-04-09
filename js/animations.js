@@ -31,5 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     duration: 1.1
                 });
         }
+
+        if (document.querySelector(".hero--fourth-page")) {
+            gsap
+                .timeline()
+                .from('.fade-out-left', {
+                    xPercent: -100,
+                    opacity: 0,
+                    duration: 1.3
+                });
+        }
     }
 });
