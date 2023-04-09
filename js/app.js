@@ -31,4 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    let btnTop = document.querySelector('.btn__top');
+
+    btnTop.onclick = (e) => {
+        e.preventDefault();
+
+        window.scrollTo({
+            behavior: 'smooth',
+            top: 0
+        })
+    }
+
+    window.onscroll = () => {
+        btnTop.classList.toggle('btn__top--active', window.scrollY > 100)
+    }
 });
